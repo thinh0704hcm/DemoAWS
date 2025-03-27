@@ -1,0 +1,14 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "handler.mjs",
+  "scripts": {
+    "start": "node handler.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/dsql-signer": "^3.775.0",
+    "pg": "^8.14.1",
+    "uuid": "^9.0.0"
+  }
+}
