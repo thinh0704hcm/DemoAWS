@@ -1,0 +1,13 @@
+{
+  "name": "lambda-aurora-dsql",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/dsql-signer": "^3.775.0",
+    "pg": "^8.14.1"
+  }
+}
