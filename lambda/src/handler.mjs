@@ -1,5 +1,5 @@
-// src/handler.js
-import { routes, matchRoute } from './routes.js';
+// handler.mjs
+import { routes, matchRoute } from './routes.mjs';
 
 const headers = {
   'Content-Type': 'application/json',
@@ -24,11 +24,13 @@ export async function handler(event, context) {
 
     const result = await route.handler(route.params, parsedBody);
     const isCreate = httpMethod === 'POST';
+    const isDelete = httpMethod === 'DELETE';
     return {
       statusCode: isCreate ? 201 : 200,
       headers,
       body: JSON.stringify({
         ...(isCreate ? { message: `${path.slice(1)} created successfully` } : {}),
+        ...(isDelete ? { message: `${path.slice(1)} soft-deleted successfully` } : {}),
         ...result,
       }),
     };

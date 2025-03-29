@@ -1,5 +1,5 @@
-// src/routes.js
-import * as services from './services.js';
+// src/routes.mjs
+import * as services from './services.mjs';
 
 export const routes = [
   {

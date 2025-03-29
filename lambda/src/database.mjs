@@ -1,5 +1,6 @@
-// src/database.js
-import { Pool } from 'pg';
+// src/database.mjs
+import pkg from 'pg';
+const { Pool } = pkg;
 import { DsqlSigner } from '@aws-sdk/dsql-signer';
 
 let pool;

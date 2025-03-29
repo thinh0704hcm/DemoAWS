@@ -2,13 +2,21 @@
   "name": "lambda",
   "version": "1.0.0",
   "type": "module",
-  "main": "handler.mjs",
+  "main": "src/handler.mjs",
   "scripts": {
+    "build": "esbuild src/handler.mjs --bundle --outfile=dist/handler.mjs --platform=node --format=esm",
     "start": "node handler.mjs"
   },
   "dependencies": {
     "@aws-sdk/dsql-signer": "^3.775.0",
     "pg": "^8.14.1",
     "uuid": "^9.0.0"
-  }
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
